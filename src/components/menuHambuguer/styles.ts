@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const MenuContainer = styled.div`
@@ -29,7 +30,7 @@ const HamburgerIcon = styled.div`
   color: white;
 `;
 
-const PageLink = styled.a`
+const PageLink = styled(Link)`
   text-decoration: none;
   color: white;
   font-weight: bold;

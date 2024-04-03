@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 const LayoutContainer = styled.div`
@@ -31,7 +32,7 @@ const Content = styled.div`
   padding: 20px;
 `;
 
-const PageLink = styled.a`
+const PageLink = styled(Link)`
   text-decoration: none;
   color: white;
   font-weight: bold;
@@ -74,7 +75,7 @@ const ListItem = styled.li<{ $active: boolean }>`
   }
 `;
 
-const LogoutButton = styled.a`
+const LogoutButton = styled(Link)`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.primary};
   color: white;

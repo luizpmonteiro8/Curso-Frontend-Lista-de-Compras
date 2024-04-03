@@ -42,11 +42,11 @@ export const MenuHambuguer = ({
             $active={activeRouter === menuItem.url}
             key={"menuitemwrapper" + index}
           >
-            <PageLink href={menuItem.url}>{menuItem.text}</PageLink>
+            <PageLink to={menuItem.url}>{menuItem.text}</PageLink>
           </MenuItemWrapper>
         ))}
       </NavigationMenu>
-      <PageLink href={pageText.url}>{pageText.text}</PageLink>
+      <PageLink to={pageText.url}>{pageText.text}</PageLink>
       {isOpen ? (
         <CloseButton onClick={closeMenu}>X</CloseButton>
       ) : (

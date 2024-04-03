@@ -38,11 +38,11 @@ export const SideBar = ({
       <SideBarWrapper $menuPosition={menuPosition}>
         <SideBarTop>
           <PageTitle>
-            <PageTitleLink href={pageText.url}>{pageText.text}</PageTitleLink>
+            <PageTitleLink to={pageText.url}>{pageText.text}</PageTitleLink>
           </PageTitle>
           <MenuList>
             {menuItems.map((menuItem, index) => (
-              <PageLink key={"menuItem" + index} href={menuItem.url}>
+              <PageLink key={"menuItem" + index} to={menuItem.url}>
                 <ListItem $active={activeRouter === menuItem.url}>
                   {menuItem.text}
                 </ListItem>
@@ -50,7 +50,7 @@ export const SideBar = ({
             ))}
           </MenuList>
         </SideBarTop>
-        <LogoutButton href={logoutText.url}>{logoutText.text}</LogoutButton>
+        <LogoutButton to={logoutText.url}>{logoutText.text}</LogoutButton>
       </SideBarWrapper>
       <Content>{children}</Content>
     </LayoutContainer>
