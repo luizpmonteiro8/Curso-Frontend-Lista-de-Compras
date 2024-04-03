@@ -1,12 +1,12 @@
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Market } from "../../../api/model/market";
 import { marketService } from "../../../api/services/marketService";
-import { Form } from "./form";
 import handleAxiosError from "../../../common/util/handleAxiosError";
-import { useNavigate, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { Card } from "../../../styles-global";
 import { Spinner } from "../../../components/spinner/styles";
+import { Card } from "../../../styles-global";
+import { Form } from "./form";
 
 export const MarketForm = () => {
   const [market, setMarket] = useState<Market | undefined>(undefined);
