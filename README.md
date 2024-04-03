@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # Lista de Compras
 
 Este projeto foi desenvolvido como parte do curso de frontend na Udemy.
+=======
+# Lista de conpras
+
+Projeto
+>>>>>>> 65889044bdb375671665ccedda2ba0cbb905530f
 
 **Link do Projeto:** Em breve.
 
