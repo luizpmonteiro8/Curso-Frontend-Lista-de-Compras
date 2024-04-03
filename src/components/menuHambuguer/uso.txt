@@ -1,0 +1,19 @@
+import { useState } from "react";
+import { MenuHambuguer } from "./common/menuHambuguer";
+
+const App = () => {
+  const pageText = { text: "Minha Página", url: "/home" };
+  const menuItems = [
+    { text: "Produtos", url: "/produtos" },
+    { text: "Lojas", url: "/lojas" },
+    { text: "Sobre", url: "/sobre" },
+  ];
+
+  return (
+    <>
+      <MenuHambuguer pageText={pageText} menuItems={menuItems}></MenuHambuguer>
+    </>
+  );
+};
+
+export default App;

@@ -1,0 +1,56 @@
+import { ChangeEvent, useState } from "react";
+import { CustomInput } from "./common/customInput";
+import { log } from "console";
+
+const App = () => {
+  const [name, setName] = useState<string>("");
+  const [date, setDate] = useState<Date>();
+  const [errorName, setErrorName] = useState<string>("");
+
+  const onChangeNameInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setName(value);
+    if (value.length < 7) {
+      setErrorName("Nome deve ser maior que 7 caracteres");
+    } else {
+      setErrorName("");
+    }
+  };
+
+  const dateStringValue = () => {
+    const dateValue = date?.toISOString().split("T")[0];
+
+    return dateValue ?? "";
+  };
+
+  const onChangeDateInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setDate(new Date(value));
+  };
+  return (
+    <>
+      <form>
+        <CustomInput
+          name="name"
+          label="Nome"
+          value={name}
+          placeholder="Digite o nome"
+          type="text"
+          onChange={onChangeNameInput}
+          error={errorName}
+        ></CustomInput>
+
+        <CustomInput
+          name="date"
+          label="Data de nascimento"
+          value={dateStringValue()}
+          placeholder="Digite a data de nascimento"
+          type="date"
+          onChange={onChangeDateInput}
+        ></CustomInput>
+      </form>
+    </>
+  );
+};
+
+export default App;

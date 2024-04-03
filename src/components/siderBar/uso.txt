@@ -1,0 +1,24 @@
+import { SideBar } from "./common/siderBar";
+
+const App = () => {
+  const pageText = { text: "Minha Página", url: "/home" };
+  const menuItems = [
+    { text: "Produtos", url: "/produtos" },
+    { text: "Lojas", url: "/lojas" },
+    { text: "Sobre", url: "/sobre" },
+  ];
+  const logoutText = { text: "Sair", url: "/login" };
+  return (
+    <>
+      <SideBar
+        pageText={pageText}
+        menuItems={menuItems}
+        logoutText={logoutText}
+      >
+        <h1>Conteúdo da aplicação</h1>
+      </SideBar>
+    </>
+  );
+};
+
+export default App;
